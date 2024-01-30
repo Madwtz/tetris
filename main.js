@@ -28,7 +28,6 @@ class TetrisBoard {
     this.filledCells = [];
     this.currentTetrisBlock = this.getRandomPiece();
 
-    this.startTetrisInterval();
     this.renderBoard();
   }
 
@@ -233,10 +232,13 @@ class TetrisBoard {
     document.addEventListener("keydown", (event) => {
       if (event.key === "ArrowLeft") {
         this.moveTetrisBlock("left");
+        event.target.blur();
       } else if (event.key === "ArrowRight") {
         this.moveTetrisBlock("right");
+        event.target.blur();
       } else if (event.key === " ") {
         this.rotateTetrisBlock();
+        event.target.blur();
       }
     });
 
