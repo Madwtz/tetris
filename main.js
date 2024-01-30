@@ -221,7 +221,7 @@ class TetrisBoard {
   startTetrisInterval() {
     this.intervalId = setInterval(() => {
       this.moveTetrisBlockDown();
-    }, 200);
+    }, 300);
   }
 
   stopTetrisInterval() {
